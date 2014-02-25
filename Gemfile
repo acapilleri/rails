@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gemspec
+#gemspec
 
 if ENV['AREL']
   gem 'arel', path: ENV['AREL']
