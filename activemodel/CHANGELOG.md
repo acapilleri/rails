@@ -1,3 +1,23 @@
+*   raise `ArgumentExcpetion` if `validates` has duplicated attributes. 
+
+    Example:
+
+        class Person
+           include ActiveModel::Validations
+
+           attr :name
+           validates_presence_of :name, :name
+         end
+         #=> `ArgumentError Exception`
+
+         # Before 
+         person = Person.new
+         person.valid?
+         person.errors.size #=> 2
+
+
+    *Angelo Capilleri*
+
 *   `#to_param` returns `nil` if `#to_key` returns `nil`. Fixes #11399.
 
     *Yves Senn*
