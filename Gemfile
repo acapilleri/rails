@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 #gemspec
 
-if ENV['AREL']
+#if ENV['AREL']
   gem 'arel', path: ENV['AREL']
 else
   gem 'arel'
